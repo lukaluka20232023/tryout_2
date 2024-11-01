@@ -1,5 +1,5 @@
-export interface ItemFilter{
-    model: string;
-    priceFrom: number;
-    priceTo: number;
+export interface ItemFilter {
+  model?: string;
+  priceFrom?: number;
+  priceTo?: number;
 }

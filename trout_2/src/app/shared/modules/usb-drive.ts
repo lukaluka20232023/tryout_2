@@ -1,6 +1,6 @@
-export interface UsbDrive{
-    id: string
-    modelName: string;
-    price: number;
-    isAvaliable: boolean;
+export interface UsbDrive {
+  id: string;
+  modelName: string;
+  price: number;
+  isAvailable: boolean;
 }

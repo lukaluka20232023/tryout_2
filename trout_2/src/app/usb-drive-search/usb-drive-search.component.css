@@ -1,0 +1,18 @@
+.out-of-stock {
+  background-color: yellow;
+}
+
+table {
+  border-collapse: collapse;
+}
+tr td {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.search-form {
+  display: flex;
+}
+.search-item {
+  padding: 5px;
+}

@@ -1,0 +1,40 @@
+<h3>Usb Drive Search</h3>
+
+<form [formGroup]="searchForm" (ngSubmit)="OnSearch()">
+    <div class="search-form">
+        <div class="search-item">
+            <input formControlName="model" placeholder="Model Name">
+        </div>
+        <div class="search-item">
+            <input type="number" formControlName="priceFrom" placeholder="Price From">
+        </div>
+        <div class="search-item">
+            <input type="number" formControlName="priceTo" placeholder="Price To">
+        </div>
+        <div class="search-item">
+            <button type="submit">search</button>
+        </div>
+        <div class="search-item">
+            <button type="reset" (click)="OnReset()">reset</button>
+        </div>
+    </div>
+</form>
+
+<table>
+  <thead>
+    <th>Id</th>
+    <th>Model Name</th>
+    <th>Price</th>
+    <th>Is Available</th>
+  </thead>
+  <tbody>
+    @for(usbDrive of usbDrives; track usbDrive.id){
+    <tr class="{{ usbDrive.isAvailable ? '' : 'out-of-stock' }}">
+      <td>{{ usbDrive.id }}</td>
+      <td>{{ usbDrive.modelName }}</td>
+      <td>{{ usbDrive.isAvailable ? usbDrive.price : "N/A" }}</td>
+      <td>{{ usbDrive.isAvailable ? "Yes" : "No" }}</td>
+    </tr>
+    }
+  </tbody>
+</table>
